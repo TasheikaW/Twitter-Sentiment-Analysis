@@ -138,18 +138,36 @@ df_vader_sentiments["overall_sentiment"].value_counts().plot.bar()
 ```
 
 # Result
+ ## Overall
 This project aimed to see the sentiment expressed toward Donald Trump before and after the assassination attempt. 
 The results show that from the data set pulled, overall more negative sentiments were being expressed.
 ![newplot](https://github.com/user-attachments/assets/e9424223-177b-40ee-bed8-de23d06ae2d2)
-
-To assess the sentiment before and after, a bar plot was generated. Here we can see 2 dates ( This is due to the limited amount of tweets that I had access to). One date was before the attempt and the other was after. 
-![download (1)](https://github.com/user-attachments/assets/370b9f13-9373-4a2d-9842-f1e2e7fee4ee)
 
 A breakdown of sentiments by more complex emotion was also done
 Outside of negative and positive emotions, we see that surprise was the next highest. I think this was high as no one saw this coming and they were taken aback by what the witness
 
 ![newplot (1)](https://github.com/user-attachments/assets/1211a598-e906-4d58-b856-7644ebbb15c4)
 
+## Comparison of Before and After
 
-We can see that before the attempt there was a balance between negative, positive, and neutral sentiment. However, after the attempt, there was a jump in negative sentiment around Donald Trump.
+To assess the sentiment before and after, a bar plot was generated. Here we can see 2 dates ( This is due to the limited amount of tweets that I had access to). One date was before the attempt and the other was after. We can see that before the attempt there was a balance between negative, positive, and neutral sentiment. However, after the attempt, there was a jump in negative sentiment around Donald Trump.
+
+![download (1)](https://github.com/user-attachments/assets/370b9f13-9373-4a2d-9842-f1e2e7fee4ee)
+
+With the more complex  emotion classification, we see how the emotions change before and after the assassination attempt. We see increases in emotions such as Fear, Anticipation
+### Before
+![newplot (2)](https://github.com/user-attachments/assets/8cbe104f-35e3-480b-95c4-18f1c90e5c14)
+### After
+![newplot (3)](https://github.com/user-attachments/assets/8289f9f7-eb2c-4e30-9f55-39bb74014dbb)
+
+I also wanted to look at the public metrics on the tweets classified by sentiments. These metrics included:
+- likes
+- replies
+- quotes
+- retweet
+Based on the data It was determined that tweets that conveys positive sentiments receive higher metrics than thoses that portray negative sentiments
+![download (2)](https://github.com/user-attachments/assets/1fbcdb4c-de2c-4e37-9be4-6e3df9dc0567)
+
+
+
 
