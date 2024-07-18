@@ -144,5 +144,12 @@ The results show that from the data set pulled, overall more negative sentiments
 
 To assess the sentiment before and after, a bar plot was generated. Here we can see 2 dates ( This is due to the limited amount of tweets that I had access to). One date was before the attempt and the other was after. 
 ![download (1)](https://github.com/user-attachments/assets/370b9f13-9373-4a2d-9842-f1e2e7fee4ee)
-We can see that before the attempt there was a balance between negative, positive, and neutral sentiment. However, after the attempt there was a jump in negative sentiment around Donald Trump.
+
+A breakdown of sentiments by more complex emotion was also done
+Outside of negative and positive emotions, we see that surprise was the next highest. I think this was high as no one saw this coming and they were taken aback by what the witness
+
+![newplot (1)](https://github.com/user-attachments/assets/1211a598-e906-4d58-b856-7644ebbb15c4)
+
+
+We can see that before the attempt there was a balance between negative, positive, and neutral sentiment. However, after the attempt, there was a jump in negative sentiment around Donald Trump.
 
