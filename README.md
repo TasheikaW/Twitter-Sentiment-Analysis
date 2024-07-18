@@ -173,3 +173,7 @@ Based on the data It was determined that tweets that convey positive sentiments 
 The biggest limitation of this project was the size of the dataset.
 Due to changes made to X (Twitter) developer,  The number of tweets accessible  was limited. 
 
+# Reference
+[visit here](https://www.geeksforgeeks.org/emotion-classification-using-nrc-lexicon-in-python/)
+
+
