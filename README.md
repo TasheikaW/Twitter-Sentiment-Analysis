@@ -14,7 +14,7 @@ The format of the YAML file was:
 
   ## Tools:
   - Jyputer notebook: used for Data mining, Data cleaning, and Analysis
-  - Tableau: used for creating a report
+  - Tableau: used for creating a report 
   - Powerpoint
 
 ## Data Mining
@@ -90,10 +90,59 @@ In the data analysis section, multiple exploration was done.
 ### Word Cloud Generation
 Word clouds are a straightforward tool for visualizing the most frequently used words in a collection of texts. In a word cloud, words are displayed in varying sizes, 
 with larger words appearing more frequently in the text. In this section, The intention was to create a Word cloud with an Image of Donald Trump. However, due to the limited 
-size of the data pulled A well-formed Image word cloud was not generated. (see notebook for the word cloud). 
-The word cloud was generated in two different ways to broaden my learning.
+size of the data pulled A well-formed Image word cloud was not generated. 
 
+![download](https://github.com/user-attachments/assets/a8279e65-03af-42b8-9002-2989314f86fb)
 
+The word cloud was generated in two different ways to broaden my learning.(see notebook for the well-formed word cloud)
 
+### Sentiment Analysis
+Sentiment analysis involves classifying the sentiment of text data.  VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool was used, which is well-suited for analyzing social media text. The Nrclex libray was also used to calculate more complex emotions such as Joy, sadness etc.
+``` python
+#import the library
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+#calculate the negative, positive, neutral and compound scores, plus verbal evaluation
+def sentiment_vader(tweets):
+
+    # Create a SentimentIntensityAnalyzer object.
+    sid = SentimentIntensityAnalyzer()
+
+    sentiment_dict = sid.polarity_scores(tweets)
+    negative = sentiment_dict['neg']
+    neutral = sentiment_dict['neu']
+    positive = sentiment_dict['pos']
+    compound = sentiment_dict['compound']
+
+    if sentiment_dict['compound'] >= 0.05 :
+        overall_sentiment = "Positive"
+
+    elif sentiment_dict['compound'] <= - 0.05 :
+        overall_sentiment = "Negative"
+
+    else :
+        overall_sentiment = "Neutral"
+
+    return negative, neutral, positive, compound, overall_sentiment
+
+#Implement it on each tweet individually
+
+df_tweets["sentiment_vader"] = df_tweets["text_stemmed_porter"].apply(lambda tweet: sentiment_vader(tweet))
+
+df_vader_sentiments = pd.DataFrame()
+df_vader_sentiments[["negative_sentiment", "neutral_sentiment", "positive sentiment", "compound_sentiment", "overall_sentiment"]] = \
+    pd.DataFrame(df_tweets['sentiment_vader'].tolist())
+
+#Plot the distribution of positive, negative and neutral graphs
+df_vader_sentiments["overall_sentiment"].value_counts().plot.bar()
+```
+
+# Result
+This project aimed to see the sentiment expressed toward Donald Trump before and after the assassination attempt. 
+The results show that from the data set pulled, overall more negative sentiments were being expressed.
+![newplot](https://github.com/user-attachments/assets/e9424223-177b-40ee-bed8-de23d06ae2d2)
+
+To assess the sentiment before and after, a bar plot was generated. Here we can see 2 dates ( This is due to the limited amount of tweets that I had access to). One date was before the attempt and the other was after. 
+![download (1)](https://github.com/user-attachments/assets/370b9f13-9373-4a2d-9842-f1e2e7fee4ee)
+We can see that before the attempt there was a balance between negative, positive, and neutral sentiment. However, after the attempt there was a jump in negative sentiment around Donald Trump.
 
