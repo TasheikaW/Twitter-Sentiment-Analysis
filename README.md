@@ -174,7 +174,7 @@ The biggest limitation of this project was the size of the dataset.
 Due to changes made to X (Twitter) developer,  The number of tweets accessible  was limited. 
 
 # Reference
-[Emotion classification using NRC Lexicon in Python](https://www.geeksforgeeks.org/emotion-classification-using-nrc-lexicon-in-python/)
-[Getting Started with Twitter's Academic Track API](https://muhark.github.io/python/scraping/tutorial/2021/03/25/getting-started-with-academic-twitter.html)
+- [Emotion classification using NRC Lexicon in Python](https://www.geeksforgeeks.org/emotion-classification-using-nrc-lexicon-in-python/)
+- [Getting Started with Twitter's Academic Track API](https://muhark.github.io/python/scraping/tutorial/2021/03/25/getting-started-with-academic-twitter.html)
 
 
