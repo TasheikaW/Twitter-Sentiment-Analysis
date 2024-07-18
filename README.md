@@ -165,9 +165,11 @@ I also wanted to look at the public metrics on the tweets classified by sentimen
 - replies
 - quotes
 - retweet
-Based on the data It was determined that tweets that conveys positive sentiments receive higher metrics than thoses that portray negative sentiments
+Based on the data It was determined that tweets that convey positive sentiments receive higher metrics than those that portray negative sentiments
 ![download (2)](https://github.com/user-attachments/assets/1fbcdb4c-de2c-4e37-9be4-6e3df9dc0567)
 
 
-
+# Limitation
+The biggest limitation of this project was the size of the dataset.
+Due to changes made to X (Twitter) developer,  The number of tweets accessible  was limited. 
 
