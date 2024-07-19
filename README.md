@@ -1,9 +1,9 @@
 # Sentiment Analysis
-## Sentiment sorrounding Donald Trump Before and After Assassination Attempt
+## Sentiment surrounding Donald Trump Before and After Assassination Attempt
 
 ## Project Overview
-The aim of this project is to build on my data analysis skills by exploring pyhton. To do this, I decided to focus on a news worthy event to perform a sentiment analysis. 
-This project aims to explore the Change in sentiments of the past president of the United States following the recent assassination attempt. I aim to see what the sentiment around him was like before the event, and if there are any changes since. 
+This project aims to build on my data analysis skills by exploring Python. To do this, I decided to focus on a newsworthy event to perform a sentiment analysis. 
+This project aims to explore the Change in sentiments of the past president of the United States following the recent assassination attempt. I aim to see what the sentiment around him was like before the event, and if there are any changes since. [see the full code here](https://github.com/TasheikaW/Twitter-Sentiment-Analysis/blob/main/Trump%20Sentiment%20Analysis%20(1).ipynb)
 
 ### Data Sources
 Twitter: Data was pulled from X (Twitter) using the Twitter API. A YAML file with the credentials needed to connect to the Twitter API was created. 
@@ -14,11 +14,11 @@ The format of the YAML file was:
     - consumer_secret: <CONSUMER_SECRET>
     - bearer_token: <BEARER_TOKEN>
 
-  ## Tools:
+  ## Tools
   - Jyputer notebook: used for Data mining, Data cleaning, and Analysis
-  - 
+    
 ## Data Mining
-The API method was used to pull the data from X (Twitter). A YAML file was created to store the X credentials. To connect to X, the API and the query was initialized after which is was implemented. The query contains the parameters for the tweet that needed to be mined from Twitter. Tweets from before and after the attempt were pulled. A snippet of the code is below.
+The API method was used to pull the data from X (Twitter). A YAML file was created to store the X credentials. To connect to X, the API, and the query were initialized after which it was implemented Thus gathering the tweets based on the query. The query contains the parameters for the tweet that needed to be mined from Twitter. Tweets from before and after the attempt were pulled. A snippet of the code is below.
 
 ``` python
 search_args = tw.load_credentials("search_tweets_v2.yaml",
