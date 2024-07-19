@@ -1,7 +1,9 @@
-# Sentiment Analysis - Donald Trump Before and After Assassination Attempt
+# Sentiment Analysis
+## Sentiment sorrounding Donald Trump Before and After Assassination Attempt
+
 ## Project Overview
-This project aims to explore the Change in sentiments of the Past president of the United States following the recent assassination attempt. With this project as well
-I am exploring and building on my Python knowledge and skills.
+The aim of this project is to build on my data analysis skills by exploring pyhton. To do this, I decided to focus on a news worthy event to perform a sentiment analysis. 
+This project aims to explore the Change in sentiments of the past president of the United States following the recent assassination attempt. I aim to see what the sentiment around him was like before the event, and if there are any changes since. 
 
 ### Data Sources
 Twitter: Data was pulled from X (Twitter) using the Twitter API. A YAML file with the credentials needed to connect to the Twitter API was created. 
@@ -14,12 +16,9 @@ The format of the YAML file was:
 
   ## Tools:
   - Jyputer notebook: used for Data mining, Data cleaning, and Analysis
-  - Tableau: used for creating a report 
-  - Powerpoint
-
+  - 
 ## Data Mining
-The API was used to pull the data from Tweets from X (Twitter). A YAML file was created to store the credentials. To connect to X, the API  was initialized followed by the query. The query 
-contains the parameters for the tweet that needed to be mined from Twitter. Tweets from before and after the attempt were pulled. A snippet of the code is below.
+The API method was used to pull the data from X (Twitter). A YAML file was created to store the X credentials. To connect to X, the API and the query was initialized after which is was implemented. The query contains the parameters for the tweet that needed to be mined from Twitter. Tweets from before and after the attempt were pulled. A snippet of the code is below.
 
 ``` python
 search_args = tw.load_credentials("search_tweets_v2.yaml",
@@ -43,7 +42,6 @@ tweets_before = tw.collect_results(
     result_stream_args=search_args
 )
 ```
-
 Once the tweets were pulled from X, They were saved in 2 data frames. One for the tweets before the incident, and one for after the incident. 
 With the data frame, The stats for the public metrics had to be their columns. To save the subset of data with public metrics, a function was defined 
 and used to pull out the parameters from the public metrics, then save it into a new data frame.
@@ -86,6 +84,7 @@ In the data analysis section, multiple exploration was done.
 
 - Word Cloud generation
 - Sentiment Analysis
+- Visualization
 
 ### Word Cloud Generation
 Word clouds are a straightforward tool for visualizing the most frequently used words in a collection of texts. In a word cloud, words are displayed in varying sizes, 
@@ -139,7 +138,6 @@ df_vader_sentiments["overall_sentiment"].value_counts().plot.bar()
 
 # Result
  ## Overall
-This project aimed to see the sentiment expressed toward Donald Trump before and after the assassination attempt. 
 The results show that from the data set pulled, overall more negative sentiments were being expressed.
 ![newplot](https://github.com/user-attachments/assets/e9424223-177b-40ee-bed8-de23d06ae2d2)
 
@@ -154,7 +152,7 @@ To assess the sentiment before and after, a bar plot was generated. Here we can 
 
 ![download (1)](https://github.com/user-attachments/assets/370b9f13-9373-4a2d-9842-f1e2e7fee4ee)
 
-With the more complex  emotion classification, we see how the emotions change before and after the assassination attempt. We see increases in emotions such as Fear, Anticipation
+With the more complex  emotion classification, we see how the emotions change before and after the assassination attempt. We see increases in emotions such as Fear and Anticipation.
 ### Before
 ![newplot (2)](https://github.com/user-attachments/assets/8cbe104f-35e3-480b-95c4-18f1c90e5c14)
 ### After
@@ -165,13 +163,13 @@ I also wanted to look at the public metrics on the tweets classified by sentimen
 - replies
 - quotes
 - retweet
-Based on the data It was determined that tweets that convey positive sentiments receive higher metrics than those that portray negative sentiments
+Based on the data It was determined that tweets that convey positive sentiments receive higher metrics than those that portray negative sentiments. 
 ![download (2)](https://github.com/user-attachments/assets/1fbcdb4c-de2c-4e37-9be4-6e3df9dc0567)
 
 
 # Limitation
 The biggest limitation of this project was the size of the dataset.
-Due to changes made to X (Twitter) developer,  The number of tweets accessible  was limited. 
+Due to changes made to X (Twitter) developer, The number of tweets accessible  was limited. 
 
 # Reference
 - [Emotion classification using NRC Lexicon in Python](https://www.geeksforgeeks.org/emotion-classification-using-nrc-lexicon-in-python/)
